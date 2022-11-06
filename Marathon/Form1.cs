@@ -25,7 +25,7 @@ namespace Marathon
         {
             reg_form new_runner = new reg_form();
             new_runner.Show();
-            Hide();
+            this.Hide();
         }
     }
 }

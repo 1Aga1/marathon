@@ -12,24 +12,47 @@ namespace Marathon
 {
     public partial class auth_form : Form
     {
+        Check check = new Check();
+        AccountInfo account = new AccountInfo();
+        DBConnect db = new DBConnect();
+
         public auth_form()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void to_main_Click(object sender, EventArgs e)
         {
             main_form main = new main_form();
             main.Show();
-            Hide();
+            this.Hide();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void to_sign_in_Click(object sender, EventArgs e)
         {
             reg_form reg = new reg_form();
             reg.Show();
-            Hide();
+            this.Hide();
+        }
+
+        private void log_in_Click(object sender, EventArgs e)
+        {
+            var email = email_txtbox.Text;
+            var password = password_txtbox.Text;
+
+            if (check.validationUser(email, password))
+            {
+                account.getAllInfo(email);
+
+                main_form main = new main_form();
+                main.Show();
+                this.Hide();
+            } 
+            else
+            {
+                MessageBox.Show("Пользователь не найден!");
+            }
         }
     }
 }

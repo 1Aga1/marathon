@@ -27,14 +27,14 @@ namespace Marathon
         {
             main_form main = new main_form();
             main.Show();
-            Hide();
+            this.Hide();
         }
 
         private void to_log_in_Click(object sender, EventArgs e)
         {
             auth_form auth = new auth_form();
             auth.Show();
-            Hide();
+            this.Hide();
         }
 
         private void sign_in_Click(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace Marathon
                 {
                     auth_form auth = new auth_form();
                     auth.Show();
-                    Hide();
+                    this.Hide();
                 }
                 else
                 {

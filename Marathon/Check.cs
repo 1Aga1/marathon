@@ -7,15 +7,16 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace Marathon
 {
     internal class Check
     {
         DBConnect db = new DBConnect();
+
         public Boolean checkUser(string email)
         {
-
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
@@ -33,15 +34,28 @@ namespace Marathon
             }
             else
             {
-                query = $"SELECT MAX(id) FROM runners";
+                return false;
+            }
+        }
 
-                command = new SqlCommand(query, db.getConnection());
+        public Boolean validationUser(string email, string password)
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable table = new DataTable();
 
-                adapter.SelectCommand = command;
-                adapter.Fill(table);
+            string query = $"SELECT id FROM runners WHERE email = '{email}' and password = '{password}'";
 
-                Console.WriteLine(command.ToString(), table);
+            SqlCommand command = new SqlCommand(query, db.getConnection());
 
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
                 return false;
             }
         }
