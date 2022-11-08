@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reg_form));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.to_main = new System.Windows.Forms.Label();
@@ -65,9 +64,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(100, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 26);
+            this.label2.Size = new System.Drawing.Size(130, 26);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Registration";
+            this.label2.Text = "Регистрация";
             // 
             // to_main
             // 
@@ -100,7 +99,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::Marathon.Properties.Resources.users_defoult;
             this.pictureBox1.Location = new System.Drawing.Point(50, 3);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -115,7 +114,7 @@
             this.full_name_txtbox.Name = "full_name_txtbox";
             this.full_name_txtbox.Size = new System.Drawing.Size(197, 20);
             this.full_name_txtbox.TabIndex = 3;
-            this.full_name_txtbox.Text = "Full name";
+            this.full_name_txtbox.Text = "ФИО";
             // 
             // email_txtbox
             // 
@@ -156,48 +155,50 @@
             // 
             this.gender_txtbox.FormattingEnabled = true;
             this.gender_txtbox.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "Мужской",
+            "Женский"});
             this.gender_txtbox.Location = new System.Drawing.Point(3, 235);
             this.gender_txtbox.Name = "gender_txtbox";
             this.gender_txtbox.Size = new System.Drawing.Size(197, 21);
             this.gender_txtbox.TabIndex = 9;
-            this.gender_txtbox.Text = "Gender";
+            this.gender_txtbox.Text = "Пол";
             // 
             // country_txtbox
             // 
             this.country_txtbox.FormattingEnabled = true;
             this.country_txtbox.Items.AddRange(new object[] {
-            "Russia",
-            "USA",
-            "Brazil",
-            "Japan",
-            "China"});
+            "Россия",
+            "США",
+            "Бразилия",
+            "Япония",
+            "Китай"});
             this.country_txtbox.Location = new System.Drawing.Point(3, 262);
             this.country_txtbox.Name = "country_txtbox";
             this.country_txtbox.Size = new System.Drawing.Size(197, 21);
             this.country_txtbox.TabIndex = 10;
-            this.country_txtbox.Text = "Country";
+            this.country_txtbox.Text = "Страна";
             // 
             // sign_in
             // 
-            this.sign_in.Location = new System.Drawing.Point(60, 289);
-            this.sign_in.Margin = new System.Windows.Forms.Padding(60, 3, 3, 3);
+            this.sign_in.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sign_in.Location = new System.Drawing.Point(35, 289);
+            this.sign_in.Margin = new System.Windows.Forms.Padding(35, 3, 3, 3);
             this.sign_in.Name = "sign_in";
-            this.sign_in.Size = new System.Drawing.Size(75, 23);
+            this.sign_in.Size = new System.Drawing.Size(125, 23);
             this.sign_in.TabIndex = 11;
-            this.sign_in.Text = "Sign in";
+            this.sign_in.Text = "Зарегистрироваться";
             this.sign_in.UseVisualStyleBackColor = true;
             this.sign_in.Click += new System.EventHandler(this.sign_in_Click);
             // 
             // to_log_in
             // 
             this.to_log_in.AutoSize = true;
-            this.to_log_in.Location = new System.Drawing.Point(142, 426);
+            this.to_log_in.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.to_log_in.Location = new System.Drawing.Point(123, 426);
             this.to_log_in.Name = "to_log_in";
-            this.to_log_in.Size = new System.Drawing.Size(36, 13);
+            this.to_log_in.Size = new System.Drawing.Size(73, 13);
             this.to_log_in.TabIndex = 3;
-            this.to_log_in.Text = "Log in";
+            this.to_log_in.Text = "Авторизация";
             this.to_log_in.Click += new System.EventHandler(this.to_log_in_Click);
             // 
             // reg_form

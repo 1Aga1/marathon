@@ -69,12 +69,13 @@
             // 
             // log_in
             // 
+            this.log_in.Cursor = System.Windows.Forms.Cursors.Hand;
             this.log_in.Location = new System.Drawing.Point(60, 55);
             this.log_in.Margin = new System.Windows.Forms.Padding(60, 3, 3, 3);
             this.log_in.Name = "log_in";
             this.log_in.Size = new System.Drawing.Size(75, 23);
             this.log_in.TabIndex = 11;
-            this.log_in.Text = "Log in";
+            this.log_in.Text = "Войти";
             this.log_in.UseVisualStyleBackColor = true;
             this.log_in.Click += new System.EventHandler(this.log_in_Click);
             // 
@@ -95,9 +96,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(100, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 26);
+            this.label2.Size = new System.Drawing.Size(133, 26);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Authorization";
+            this.label2.Text = "Авторизация";
             // 
             // to_main
             // 
@@ -115,11 +116,12 @@
             // to_sign_in
             // 
             this.to_sign_in.AutoSize = true;
-            this.to_sign_in.Location = new System.Drawing.Point(141, 201);
+            this.to_sign_in.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.to_sign_in.Location = new System.Drawing.Point(127, 201);
             this.to_sign_in.Name = "to_sign_in";
-            this.to_sign_in.Size = new System.Drawing.Size(39, 13);
+            this.to_sign_in.Size = new System.Drawing.Size(72, 13);
             this.to_sign_in.TabIndex = 6;
-            this.to_sign_in.Text = "Sign in";
+            this.to_sign_in.Text = "Регистрация";
             this.to_sign_in.Click += new System.EventHandler(this.to_sign_in_Click);
             // 
             // auth_form

@@ -31,7 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.new_runner_btn = new System.Windows.Forms.Button();
-            this.about = new System.Windows.Forms.Button();
+            this.about_btn = new System.Windows.Forms.Button();
+            this.profile_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,16 +68,30 @@
             this.new_runner_btn.UseVisualStyleBackColor = true;
             this.new_runner_btn.Click += new System.EventHandler(this.new_runner_btn_Click);
             // 
-            // about
+            // about_btn
             // 
-            this.about.Cursor = System.Windows.Forms.Cursors.Help;
-            this.about.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.about.Location = new System.Drawing.Point(66, 185);
-            this.about.Name = "about";
-            this.about.Size = new System.Drawing.Size(198, 35);
-            this.about.TabIndex = 3;
-            this.about.Text = "О событии";
-            this.about.UseVisualStyleBackColor = true;
+            this.about_btn.Cursor = System.Windows.Forms.Cursors.Help;
+            this.about_btn.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.about_btn.Location = new System.Drawing.Point(66, 185);
+            this.about_btn.Name = "about_btn";
+            this.about_btn.Size = new System.Drawing.Size(198, 35);
+            this.about_btn.TabIndex = 3;
+            this.about_btn.Text = "О марафоне";
+            this.about_btn.UseVisualStyleBackColor = true;
+            this.about_btn.Click += new System.EventHandler(this.about_btn_Click);
+            // 
+            // profile_btn
+            // 
+            this.profile_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.profile_btn.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.profile_btn.Location = new System.Drawing.Point(66, 127);
+            this.profile_btn.Name = "profile_btn";
+            this.profile_btn.Size = new System.Drawing.Size(198, 35);
+            this.profile_btn.TabIndex = 4;
+            this.profile_btn.Text = "Профиль";
+            this.profile_btn.UseVisualStyleBackColor = true;
+            this.profile_btn.Visible = false;
+            this.profile_btn.Click += new System.EventHandler(this.profile_btn_Click);
             // 
             // main_form
             // 
@@ -84,7 +99,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(339, 254);
-            this.Controls.Add(this.about);
+            this.Controls.Add(this.profile_btn);
+            this.Controls.Add(this.about_btn);
             this.Controls.Add(this.new_runner_btn);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -103,7 +119,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button new_runner_btn;
-        private System.Windows.Forms.Button about;
+        private System.Windows.Forms.Button about_btn;
+        private System.Windows.Forms.Button profile_btn;
     }
 }
 
