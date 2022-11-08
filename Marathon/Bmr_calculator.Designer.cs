@@ -34,9 +34,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.sit_activity = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.max_activity = new System.Windows.Forms.Label();
+            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.high_activity = new System.Windows.Forms.Label();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
-            this.avg__activity = new System.Windows.Forms.Label();
+            this.avg_activity = new System.Windows.Forms.Label();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.min_activity = new System.Windows.Forms.Label();
@@ -60,15 +66,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.to_main = new System.Windows.Forms.Label();
-            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.high_activity = new System.Windows.Forms.Label();
-            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.max__activity = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
+            this.flowLayoutPanel8.SuspendLayout();
+            this.flowLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
@@ -78,8 +80,6 @@
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weight_txtbox)).BeginInit();
             this.panel1.SuspendLayout();
-            this.flowLayoutPanel7.SuspendLayout();
-            this.flowLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -106,9 +106,9 @@
             this.panel5.Controls.Add(this.flowLayoutPanel4);
             this.panel5.Controls.Add(this.bmr_txt);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(249, 13);
+            this.panel5.Location = new System.Drawing.Point(234, 13);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(294, 294);
+            this.panel5.Size = new System.Drawing.Size(309, 294);
             this.panel5.TabIndex = 11;
             // 
             // flowLayoutPanel3
@@ -117,7 +117,7 @@
             this.flowLayoutPanel3.Controls.Add(this.sit_activity);
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 129);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(274, 25);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(309, 25);
             this.flowLayoutPanel3.TabIndex = 5;
             // 
             // label7
@@ -150,13 +150,71 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Ежедневно тратиться калорий";
             // 
+            // flowLayoutPanel8
+            // 
+            this.flowLayoutPanel8.Controls.Add(this.label15);
+            this.flowLayoutPanel8.Controls.Add(this.max_activity);
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(0, 253);
+            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(309, 25);
+            this.flowLayoutPanel8.TabIndex = 9;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label15.Location = new System.Drawing.Point(3, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(218, 20);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Максимальная активность:";
+            // 
+            // max_activity
+            // 
+            this.max_activity.AutoSize = true;
+            this.max_activity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.max_activity.Location = new System.Drawing.Point(227, 0);
+            this.max_activity.Name = "max_activity";
+            this.max_activity.Size = new System.Drawing.Size(18, 20);
+            this.max_activity.TabIndex = 4;
+            this.max_activity.Text = "0";
+            // 
+            // flowLayoutPanel7
+            // 
+            this.flowLayoutPanel7.Controls.Add(this.label13);
+            this.flowLayoutPanel7.Controls.Add(this.high_activity);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(0, 222);
+            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(309, 25);
+            this.flowLayoutPanel7.TabIndex = 8;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label13.Location = new System.Drawing.Point(3, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(171, 20);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Сильная активность:";
+            // 
+            // high_activity
+            // 
+            this.high_activity.AutoSize = true;
+            this.high_activity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.high_activity.Location = new System.Drawing.Point(180, 0);
+            this.high_activity.Name = "high_activity";
+            this.high_activity.Size = new System.Drawing.Size(18, 20);
+            this.high_activity.TabIndex = 4;
+            this.high_activity.Text = "0";
+            // 
             // flowLayoutPanel6
             // 
             this.flowLayoutPanel6.Controls.Add(this.label11);
-            this.flowLayoutPanel6.Controls.Add(this.avg__activity);
+            this.flowLayoutPanel6.Controls.Add(this.avg_activity);
             this.flowLayoutPanel6.Location = new System.Drawing.Point(0, 191);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(274, 25);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(309, 25);
             this.flowLayoutPanel6.TabIndex = 7;
             // 
             // label11
@@ -169,15 +227,15 @@
             this.label11.TabIndex = 3;
             this.label11.Text = "Средняя активность:";
             // 
-            // avg__activity
+            // avg_activity
             // 
-            this.avg__activity.AutoSize = true;
-            this.avg__activity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.avg__activity.Location = new System.Drawing.Point(181, 0);
-            this.avg__activity.Name = "avg__activity";
-            this.avg__activity.Size = new System.Drawing.Size(18, 20);
-            this.avg__activity.TabIndex = 4;
-            this.avg__activity.Text = "0";
+            this.avg_activity.AutoSize = true;
+            this.avg_activity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.avg_activity.Location = new System.Drawing.Point(181, 0);
+            this.avg_activity.Name = "avg_activity";
+            this.avg_activity.Size = new System.Drawing.Size(18, 20);
+            this.avg_activity.TabIndex = 4;
+            this.avg_activity.Text = "0";
             // 
             // flowLayoutPanel4
             // 
@@ -185,7 +243,7 @@
             this.flowLayoutPanel4.Controls.Add(this.min_activity);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 160);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(274, 25);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(309, 25);
             this.flowLayoutPanel4.TabIndex = 6;
             // 
             // label9
@@ -210,13 +268,13 @@
             // 
             // bmr_txt
             // 
-            this.bmr_txt.AutoSize = true;
             this.bmr_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bmr_txt.Location = new System.Drawing.Point(139, 38);
+            this.bmr_txt.Location = new System.Drawing.Point(0, 30);
             this.bmr_txt.Name = "bmr_txt";
-            this.bmr_txt.Size = new System.Drawing.Size(19, 20);
+            this.bmr_txt.Size = new System.Drawing.Size(309, 20);
             this.bmr_txt.TabIndex = 1;
             this.bmr_txt.Text = "0";
+            this.bmr_txt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -417,64 +475,6 @@
             this.to_main.Text = "Marathon 2022";
             this.to_main.Click += new System.EventHandler(this.to_main_Click);
             // 
-            // flowLayoutPanel7
-            // 
-            this.flowLayoutPanel7.Controls.Add(this.label13);
-            this.flowLayoutPanel7.Controls.Add(this.high_activity);
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(0, 222);
-            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(294, 25);
-            this.flowLayoutPanel7.TabIndex = 8;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label13.Location = new System.Drawing.Point(3, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(171, 20);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Сильная активность:";
-            // 
-            // high_activity
-            // 
-            this.high_activity.AutoSize = true;
-            this.high_activity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.high_activity.Location = new System.Drawing.Point(180, 0);
-            this.high_activity.Name = "high_activity";
-            this.high_activity.Size = new System.Drawing.Size(18, 20);
-            this.high_activity.TabIndex = 4;
-            this.high_activity.Text = "0";
-            // 
-            // flowLayoutPanel8
-            // 
-            this.flowLayoutPanel8.Controls.Add(this.label15);
-            this.flowLayoutPanel8.Controls.Add(this.max__activity);
-            this.flowLayoutPanel8.Location = new System.Drawing.Point(0, 253);
-            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(294, 25);
-            this.flowLayoutPanel8.TabIndex = 9;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label15.Location = new System.Drawing.Point(3, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(218, 20);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Максимальная активность:";
-            // 
-            // max__activity
-            // 
-            this.max__activity.AutoSize = true;
-            this.max__activity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.max__activity.Location = new System.Drawing.Point(227, 0);
-            this.max__activity.Name = "max__activity";
-            this.max__activity.Size = new System.Drawing.Size(18, 20);
-            this.max__activity.TabIndex = 4;
-            this.max__activity.Text = "0";
-            // 
             // Bmr_calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,12 +486,16 @@
             this.MaximizeBox = false;
             this.Name = "Bmr_calculator";
             this.ShowIcon = false;
-            this.Text = "Bmr_calculator";
+            this.Text = "BMR calculator";
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
+            this.flowLayoutPanel8.ResumeLayout(false);
+            this.flowLayoutPanel8.PerformLayout();
+            this.flowLayoutPanel7.ResumeLayout(false);
+            this.flowLayoutPanel7.PerformLayout();
             this.flowLayoutPanel6.ResumeLayout(false);
             this.flowLayoutPanel6.PerformLayout();
             this.flowLayoutPanel4.ResumeLayout(false);
@@ -507,10 +511,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.weight_txtbox)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.flowLayoutPanel7.ResumeLayout(false);
-            this.flowLayoutPanel7.PerformLayout();
-            this.flowLayoutPanel8.ResumeLayout(false);
-            this.flowLayoutPanel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,13 +546,13 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label avg__activity;
+        private System.Windows.Forms.Label avg_activity;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label min_activity;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label max__activity;
+        private System.Windows.Forms.Label max_activity;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label high_activity;

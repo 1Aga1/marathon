@@ -28,6 +28,12 @@ namespace Marathon
             }
 
             bmr_txt.Text = bmr.ToString();
+
+            sit_activity.Text = Convert.ToString(weight * 1.2 * 24);
+            min_activity.Text = Convert.ToString(weight * 1.375 * 24);
+            avg_activity.Text = Convert.ToString(weight * 1.4625 * 24);
+            high_activity.Text = Convert.ToString(weight * 1.55 * 24);
+            max_activity.Text = Convert.ToString(weight * 1.6375 * 24);
         }
 
         public Bmr_calculator()
