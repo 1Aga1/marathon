@@ -10,44 +10,27 @@ using System.Windows.Forms;
 
 namespace Marathon
 {
-    public partial class Bmi_calculator : Form
+    public partial class Bmr_calculator : Form
     {
-        private void CalculateBMI()
+        private void CalculateBMR()
         {
-            var bmi = (double)weight_txtbox.Value / Math.Pow((double)height_txtbox.Value / 100, 2);
-            bmi_txtbox.Text = bmi.ToString();
+            var bmr = 0.0;
+            var weight = Convert.ToDouble(weight_txtbox.Value);
+            var height = Convert.ToDouble(height_txtbox.Value);
+            var age = Convert.ToDouble(age_txtbox.Value);
+            if (male_btn.CausesValidation)
+            {
+                bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+            }
+            else
+            {
+                bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+            }
 
-            if (bmi < 16)
-            {
-                result_txtbox.Text = "Дефицит";
-            }
-            else if (bmi >= 16 && bmi < 18.5)
-            {
-                result_txtbox.Text = "Недостаточный";
-            }
-            else if (bmi >= 18.5 && bmi < 25)
-            {
-                result_txtbox.Text = "Норма";
-            }
-            else if (bmi >= 25 && bmi < 30)
-            {
-                result_txtbox.Text = "Избыточный";
-            }
-            else if (bmi >= 30 && bmi < 35)
-            {
-                result_txtbox.Text = "Ожирение 1";
-            }
-            else if (bmi >= 35 && bmi < 40)
-            {
-                result_txtbox.Text = "Ожирение 2";
-            }
-            else if (bmi >= 40)
-            {
-                result_txtbox.Text = "Ожирение 3";
-            }
+            bmr_txt.Text = bmr.ToString();
         }
 
-        public Bmi_calculator()
+        public Bmr_calculator()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
@@ -58,6 +41,8 @@ namespace Marathon
                 height_txtbox.ReadOnly = true;
                 weight_txtbox.Value = AccountInfo.weight;
                 weight_txtbox.ReadOnly = true;
+                age_txtbox.Value = DateTime.Now.Year - Convert.ToInt32(AccountInfo.date_birth.Split('.')[2]);
+                age_txtbox.ReadOnly = true;
 
                 if (AccountInfo.gender == "Мужской")
                 {
@@ -72,7 +57,7 @@ namespace Marathon
                     male_btn.Enabled = false;
                 }
 
-                CalculateBMI();
+                CalculateBMR();
             }
         }
 
@@ -81,18 +66,6 @@ namespace Marathon
             main_form main = new main_form();
             main.Show();
             this.Hide();
-        }
-
-        private void calc_btn_Click(object sender, EventArgs e)
-        {
-            if ((male_btn.CausesValidation == true || female_btn.CausesValidation == true) && height_txtbox.Value != 0 && weight_txtbox.Value != 0)
-            {
-                CalculateBMI();
-            }
-            else
-            {
-                MessageBox.Show("Заполните все поля!");
-            }
         }
 
         private void male_btn_Click(object sender, EventArgs e)
@@ -105,6 +78,18 @@ namespace Marathon
         {
             male_btn.CausesValidation = false;
             female_btn.CausesValidation = true;
+        }
+
+        private void calc_btn_Click(object sender, EventArgs e)
+        {
+            if ((male_btn.CausesValidation == true || female_btn.CausesValidation == true) && height_txtbox.Value != 0 && weight_txtbox.Value != 0 && age_txtbox.Value != 0)
+            {
+                CalculateBMR();
+            }
+            else
+            {
+                MessageBox.Show("Заполните все поля!");
+            }
         }
     }
 }

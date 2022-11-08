@@ -65,6 +65,12 @@
     <Compile Include="Bmi_calculator.Designer.cs">
       <DependentUpon>Bmi_calculator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bmr_calculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bmr_calculator.Designer.cs">
+      <DependentUpon>Bmr_calculator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Check.cs" />
     <Compile Include="DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bmi_calculator.resx">
       <DependentUpon>Bmi_calculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bmr_calculator.resx">
+      <DependentUpon>Bmr_calculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

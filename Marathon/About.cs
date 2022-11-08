@@ -32,7 +32,9 @@ namespace Marathon
 
         private void bmr_btn_Click(object sender, EventArgs e)
         {
-
+            Bmr_calculator bmr = new Bmr_calculator();
+            bmr.Show();
+            this.Hide();
         }
 
         private void bmi_btn_Click(object sender, EventArgs e)
